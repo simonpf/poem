@@ -66,15 +66,6 @@ end_time = time.time()
 import os
 
 dt = end_time - start_time
-nt = os.environ["OMP_NUM_THREADS"]
-with open("results_" + str(nt) + ".dat", "w") as f:
-    f.write(str(dt))
-
-
-
-#x = oem.compute()
-#103011 // -1.1308e+12
-#0.000208998
-#103011 // -1.1308e+12
-#2.79346299509265e+17
-
+#nt = os.environ["OMP_NUM_THREADS"]
+#with open("results_" + str(nt) + ".dat", "w") as f:
+#    f.write(str(dt))
