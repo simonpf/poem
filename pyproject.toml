@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poem"
+version = "0.0.1"
+description = "A Python package for 3D inversions of satellite remote-sensing observations."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{ name = "Simon Pfreundschuh", email = "simon.pfreundschuh@colostate.edu" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Source" = "https://github.com/simonpf/poem"
+"Tracker" = "https://github.com/simonpf/poem/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
