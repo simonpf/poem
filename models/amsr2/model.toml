@@ -1,0 +1,20 @@
+name = "amsr2_emulator_atanh"
+
+[architecture]
+name = "MLP"
+
+[architecture.body]
+hidden_channels = 256
+n_layers = 6
+residual_connections = "simple"
+activation_factory = "GELU"
+normalization_factory = "LayerNorm"
+
+[input.input]
+n_features = 162
+normalize = "atanh"
+
+[output.tbs]
+shape = 1
+kind = "Quantiles"
+quantiles = 32

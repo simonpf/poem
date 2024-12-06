@@ -1,0 +1,79 @@
+[stage_1]
+dataset_module = "poem.emulator"
+training_dataset = "TrainingData"
+optimizer = "Adam"
+optimizer_args = {lr=1e-3}
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"=20}
+n_epochs = 20
+batch_size = 0
+num_dataloader_workers = 1
+metrics = ["MSE", "Bias", "CorrelationCoef"]
+
+[stage_1.training_dataset_args]
+path = "/home/simon/data/poem/training_data.nc"
+batch_size = 512
+
+[stage_1.validation_dataset_args]
+path = "/home/simon/data/poem/validation_data.nc"
+batch_size = 512
+
+[stage_2]
+dataset_module = "poem.emulator"
+training_dataset = "TrainingData"
+optimizer = "Adam"
+optimizer_args = {lr=1e-3}
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"=40}
+n_epochs = 40
+batch_size = 0
+num_dataloader_workers = 1
+metrics = ["MSE", "Bias", "CorrelationCoef"]
+
+[stage_2.training_dataset_args]
+path = "/home/simon/data/poem/training_data.nc"
+batch_size = 512
+
+[stage_2.validation_dataset_args]
+path = "/home/simon/data/poem/validation_data.nc"
+batch_size = 512
+
+[stage_3]
+dataset_module = "poem.emulator"
+training_dataset = "TrainingData"
+optimizer = "Adam"
+optimizer_args = {lr=1e-3}
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"=60}
+n_epochs = 60
+batch_size = 0
+num_dataloader_workers = 1
+metrics = ["MSE", "Bias", "CorrelationCoef"]
+
+[stage_3.training_dataset_args]
+path = "/home/simon/data/poem/training_data.nc"
+batch_size = 512
+
+[stage_3.validation_dataset_args]
+path = "/home/simon/data/poem/validation_data.nc"
+batch_size = 512
+
+[stage_4]
+dataset_module = "poem.emulator"
+training_dataset = "TrainingData"
+optimizer = "Adam"
+optimizer_args = {lr=1e-3}
+scheduler = "CosineAnnealingLR"
+scheduler_args = {"T_max"=80}
+n_epochs = 80
+batch_size = 0
+num_dataloader_workers = 1
+metrics = ["MSE", "Bias", "CorrelationCoef"]
+
+[stage_4.training_dataset_args]
+path = "/home/simon/data/poem/training_data.nc"
+batch_size = 512
+
+[stage_4.validation_dataset_args]
+path = "/home/simon/data/poem/validation_data.nc"
+batch_size = 512
